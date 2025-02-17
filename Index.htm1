@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automasters Skåne AB</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      position: relative;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      margin-right: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .language-toggle {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+    .language-toggle button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .container {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    form input[type="text"],
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 10px;
+      box-sizing: border-box;
+    }
+    form input[type="submit"] {
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Language Toggle -->
+  <div class="language-toggle">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('sv')">Svenska</button>
+  </div>
+
+  <!-- Header and Navigation -->
+  <header>
+    <h1 id="site-title">Automasters Skåne AB</h1>
+    <nav>
+      <ul>
+        <li><a href="#home" id="nav-home">Home</a></li>
+        <li><a href="#services" id="nav-services">Services</a></li>
+        <li><a href="#about" id="nav-about">About Us</a></li>
+        <li><a href="#contact" id="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Home Section -->
+    <section id="home">
+      <h2 id="home-heading">Welcome to Automasters Skåne AB</h2>
+      <p id="home-text">
+        We are a car workshop located in Lund, specializing in service, repairs, and maintenance of passenger cars and light trucks.
+      </p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <h2 id="services-heading">Our Services</h2>
+      <ul id="services-list">
+        <li>Car service and maintenance</li>
+        <li>Engine diagnostics and repairs</li>
+        <li>Brake repair</li>
+        <li>Oil changes</li>
+        <li>General vehicle inspection</li>
+      </ul>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 id="about-heading">About Us</h2>
+      <p id="about-text">
+        Automasters Skåne AB is located at Åldermansgatan 11 in Lund. We have many years of experience and a dedicated team committed to providing quality car care.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 id="contact-heading">Contact Us</h2>
+      <p id="contact-text">Address: Åldermansgatan 11, Lund, Sweden</p>
+      <p id="contact-phone">Phone: [Your Phone Number]</p>
+      <p id="contact-email">Email: [Your Email Address]</p>
+      <form id="contact-form">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" /><br />
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message"></textarea><br />
+        <input type="submit" value="Send" />
+      </form>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Automasters Skåne AB</p>
+  </footer>
+
+  <!-- JavaScript for language toggle -->
+  <script>
+    const translations = {
+      en: {
+        "site-title": "Automasters Skåne AB",
+        "nav-home": "Home",
+        "nav-services": "Services",
+        "nav-about": "About Us",
+        "nav-contact": "Contact",
+        "home-heading": "Welcome to Automasters Skåne AB",
+        "home-text": "We are a car workshop located in Lund, specializing in service, repairs, and maintenance of passenger cars and light trucks.",
+        "services-heading": "Our Services",
+        "services-list": [
+          "Car service and maintenance",
+          "Engine diagnostics and repairs",
+          "Brake repair",
+          "Oil changes",
+          "General vehicle inspection"
+        ],
+        "about-heading": "About Us",
+        "about-text": "Automasters Skåne AB is located at Åldermansgatan 11 in Lund. We have many years of experience and a dedicated team committed to providing quality car care.",
+        "contact-heading": "Contact Us",
+        "contact-text": "Address: Åldermansgatan 11, Lund, Sweden",
+        "contact-phone": "Phone: [Your Phone Number]",
+        "contact-email": "Email: [Your Email Address]",
+        "contact-form-submit": "Send"
+      },
+      sv: {
+        "site-title": "Automasters Skåne AB",
+        "nav-home": "Hem",
+        "nav-services": "Tjänster",
+        "nav-about": "Om Oss",
+        "nav-contact": "Kontakt",
+        "home-heading": "Välkommen till Automasters Skåne AB",
+        "home-text": "Vi är en bilverkstad belägen i Lund, specialiserade på service, reparationer och underhåll av personbilar och lätta lastbilar.",
+        "services-heading": "Våra Tjänster",
+        "services-list": [
+          "Bilservice och underhåll",
+          "Motordiagnostik och reparationer",
+          "Bromsreparation",
+          "Oljeändring",
+          "Allmän fordonkontroll"
+        ],
+        "about-heading": "Om Oss",
+        "about-text": "Automasters Skåne AB ligger på Åldermansgatan 11 i Lund. Vi har många års erfarenhet och ett dedikerat team som är engagerat i att leverera högkvalitativ bilvård.",
+        "contact-heading": "Kontakt",
+        "contact-text": "Adress: Åldermansgatan 11, Lund, Sverige",
+        "contact-phone": "Telefon: [Ditt Telefonnummer]",
+        "contact-email": "E-post: [Din E-postadress]",
+        "contact-form-submit": "Skicka"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.getElementById("site-title").innerText = translations[lang]["site-title"];
+      document.getElementById("nav-home").innerText = translations[lang]["nav-home"];
+      document.getElementById("nav-services").innerText = translations[lang]["nav-services"];
+      document.getElementById("nav-about").innerText = translations[lang]["nav-about"];
+      document.getElementById("nav-contact").innerText = translations[lang]["nav-contact"];
+      document.getElementById("home-heading").innerText = translations[lang]["home-heading"];
+      document.getElementById("home-text").innerText = translations[lang]["home-text"];
+      document.getElementById("services-heading").innerText = translations[lang]["services-heading"];
+
+      // Update services list dynamically
+      const servicesList = document.getElementById("services-list");
+      servicesList.innerHTML = "";
+      translations[lang]["services-list"].forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        servicesList.appendChild(li);
+      });
+
+      document.getElementById("about-heading").innerText = translations[lang]["about-heading"];
+      document.getElementById("about-text").innerText = translations[lang]["about-text"];
+      document.getElementById("contact-heading").innerText = translations[lang]["contact-heading"];
+      document.getElementById("contact-text").innerText = translations[lang]["contact-text"];
+      document.getElementById("contact-phone").innerText = translations[lang]["contact-phone"];
+      document.getElementById("contact-email").innerText = translations[lang]["contact-email"];
+
+      // Update form button
+      document.querySelector("#contact-form input[type='submit']").value =
+        translations[lang]["contact-form-submit"];
+    }
+
+    // Set default language to English
+    setLanguage('en');
+  </script>
+</body>
+</html>
